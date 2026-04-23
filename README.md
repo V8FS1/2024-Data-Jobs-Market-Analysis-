@@ -1,56 +1,111 @@
+# 📊 2024 Data Jobs Market Analysis
 
-# Data Jobs Dashboard w/ Power BI
-![Data Jobs Dashboard Demo](/Jobs_Dashboard/Videos/QuickTour.gif)
+> An end-to-end Business Intelligence solution analyzing 479,000+ global data job postings. Engineered with a scalable ETL pipeline, dimensional modeling (Star Schema), and advanced DAX to surface hiring trends, skill demands, and salary benchmarks.
 
-
->  <a href="https://app.powerbi.com/links/WhITE9_8sI?ctid=dc72d1e4-b7cc-4a12-8588-9623acf6183c&pbi_source=linkShare">📊 Explore the dashboard on Power BI Service</a> *(Microsoft account required)*
-
-
-## Introduction
-
-This dashboard was built for **Job Seekers, Career Switchers, and Role Explorers** to tackle a recurring challenge: data job market insights are fragmented and difficult to interpret. Leveraging a real-world dataset of 478,896 2024 data job postings covering job titles, compensation, and locations this project delivers a unified, intuitive interface for uncovering market trends and salary expectations.
-
-### Dashboard File
-The dashboard file is available here: [`Data_Jobs_Dashboard.pbix`](Data_Jobs_Dashboard.pbix).
+![Dashboard Overview GIF](Videos/DashboardOverview.gif)
 
 ---
 
-## Skills Showcased
+## 🚀 Business Impact & Key Insights
 
-This project served as an end-to-end exploration of core Power BI capabilities. Here's a breakdown of what was covered:
+This dashboard is designed to answer critical questions for both data professionals and talent acquisition teams through Self-Service BI:
 
--   **⚙️ Data Transformation (ETL) with Power Query:** Cleaned, restructured, and refined raw data for analysis by addressing missing values, adjusting data types, and engineering new columns.
--   **🧮 Implicit Measures:** Built measures to surface key insights and KPIs such as `Median Yearly Salary` and `Job Count`.
--   **📊 Core Charts:** Applied **Column, Bar, Line,** and **Scatter Charts** to compare job volumes and visualize trends over time.
--   **🗺️ Geospatial Analysis:** Employed **Map Charts** to map the worldwide distribution of job postings.
--   **🔢 KPI Indicators & Tables:** Incorporated **Cards** to highlight key metrics and **Tables** to present detailed, sortable data.
--   **🎨 Dashboard Design:** Crafted a clean, visually engaging layout, experimenting with both conventional and creative chart types to effectively communicate the data story.
--   **🖱️ Interactive Reporting:**
-    -   **Slicers:** For dynamic filtering of the report by Job Title.
-    -   **Buttons & Bookmarks:** To enable a smooth, seamless navigation flow.
-    -   **Drill-Through:** To transition from a broad overview into a focused, context-rich detailed view.
-    -   **Clear All Filters:** To clear all filter with a single click.
+* **Role Demand:** Which data disciplines are seeing the highest volume of postings globally?
+* **Skill Prerequisites:** What are the non-negotiable tech stacks for Data Engineers vs. Data Scientists?
+* **Compensation Benchmarks:** How do median salaries fluctuate across employment types (Full-time vs. Contract)?
+* **Data Reliability:** How much of the available job market data is statistically viable for compensation analysis?
 
 ---
 
-## Dashboard Overview
+## 🏗️ Data Architecture & Tech Stack
 
-*The report is structured across two dedicated pages one for a high-level snapshot and one for in-depth analysis.*
+This project was built with a Software Engineering approach to data, emphasizing scalability, data quality, and robust modeling.
 
-### Page 1: Market Overview
+* **ETL Pipeline Construction:** Utilized Power Query and Advanced M Code to ingest raw CSV files dynamically via `Folder.Files()`, ensuring scalable, automatic ingestion of future datasets.
+* **Dimensional Modeling:** Architected a **Star Schema** to optimize query performance, replacing flat files with distinct Fact and Dimension tables.
+* **Data Normalization:** Applied 1NF/2NF principles to expand multi-value JSON-style arrays (e.g., raw skills) into a highly performant Many-to-Many (M:M) bridge table configuration.
+* **Feature Engineering:** Developed dynamic DAX bucketing for salary histograms, converted Boolean values to user-friendly labels, and utilized bidirectional null-filling for annualized salary conversions.
 
-![Data Jobs Dashboard Page 1](/Jobs_Dashboard/Images/Main%20page.png)
+---
+## 🌟 Skills Showcased
 
-This page acts as the command center for the data job market. It surfaces essential KPIs including total job listings, median salary figures, and the most in-demand job titles giving you an immediate pulse on the current state of the market.
+### ⚙️ ETL & Data Transformation with Power Query
+Cleaned and restructured six tables using multi-step M pipelines — including type enforcement, delimiter splitting, list expansion, merge queries, group-by aggregations, and custom column logic. Wrote all transformations in the Advanced Editor with named, chained steps.
 
-### Page 2: Job Title Drill-Through
+### 🧹 Data Cleaning & Quality Management
+Resolved multi-value cells, corrected data types, removed irrelevant columns, standardized 70+ skill names, deduplicated across three passes, fixed a country mislabeling anomaly (Sudan → United States) discovered through chart-driven investigation, and built an entire dashboard page dedicated to communicating data coverage gaps.
 
-![Data Jobs Dashboard Page 2](/Jobs_Dashboard/Images/Drill%20Page.png)
+### 🗃️ Data Modeling & Star Schema Design
+Designed a star schema with one central fact table surrounded by four dimension tables, one bridge table (for many-to-many skills relationships), one analytical summary table, and a dedicated Date Table marked for time intelligence. Defined all relationships in the model view.
 
-This is the detail-focused page. Drilling through from the main view brings up a dedicated breakdown for any selected job title, covering salary distribution, remote work availability, leading hiring platforms, and a world map pinpointing job locations.
+### 🧮 DAX Measures & KPI Design
+Created 24 DAX measures across two organized measure tables, covering salary statistics (median, coverage rates, sample size), skills analytics (rank, count, per-job average), benefits and degree metrics, and data quality rates. Used RANKX, MEDIAN, and context-aware filtering patterns.
+
+### 📊 Dashboard Design & Data Storytelling
+Designed five thematically distinct pages, each with a specific analytical question, purpose-matched visuals, and annotated chart subtitles that translate raw numbers into plain-language insights. Every chart title is a question; every subtitle is an answer.
+
+### 🖱️ Interactive Reporting
+Implemented dropdown slicers (with page-specific filter sets), a Clear All Filters button, a five-button top navigation bar, and an information button (ⓘ) on the Salary Insights page with a tooltip and CTRL+Click cross-page navigation link to the Data Quality page.
+
+### 📐 Statistical Reasoning
+Used median (not mean) for all salary calculations to account for skewed distributions. Surfaced salary coverage rates, sample sizes, and data completeness metrics to give context to every salary figure presented.
+
+### 🔍 Analytical Judgment & Scope Management
+Curated 198 meaningful skills from a larger raw set by defining seven skill category lists in M code and applying dual-priority categorization logic. Removed collaboration tools (Zoom, Teams, Jira) to keep the analysis focused on technical data skills. Consolidated messy job titles into 10 standardized role categories.
+
+---
+## 📸 Dashboard Walkthrough
+
+### 1. Market Overview (The Executive View)
+Focuses on intuitive UI/UX and clear, question-based chart titles to provide immediate macro-level insights into global hiring trends.
+![Market Overview](Images/1_Market_Overview.png)
+
+### 2. Data Quality & Governance (The Engineering Mindset)
+Rather than hiding incomplete data, this page explicitly audits the dataset. Highlighting the 94% missing salary data demonstrates a commitment to data transparency and prevents stakeholders from making assumptions based on skewed metrics.
+![Data Quality](Images/5_Data_Quality.png)
+
+### 3. Skills & Roles (M:M Relationship Architecture)
+This matrix is powered by a pre-aggregated table built via complex M code and a many-to-many bridge table, standardizing over 70+ inconsistent skill variants into a clean taxonomy.
+![Skills and Roles](Images/3_Skills_Roles.png)
+
+### 4. Salary Insights (Statistical Rigor)
+Utilizes **Median over Mean** to prevent high-salary outliers from skewing the data. Powered by dynamic DAX measures to filter and bucket compensation ranges accurately.
+![Salary Insights](Images/4_Salary_Insights.png)
+
+### 5. Company Insights
+Maps out the distribution of job postings across enterprise, mid-size, and startup landscapes to track employer behavior.
+![Company Insights](Images/2_Company_Insights.png)
 
 ---
 
-## Conclusion
+## 🛠️ Engineering Challenges & Solutions
 
-This dashboard demonstrates how Power BI can convert raw job posting data into a meaningful career intelligence tool. It empowers users to filter, slice, and drill into the data enabling more confident, well-informed decisions about their next career move.
+| Challenge | Engineering Solution |
+| :--- | :--- |
+| **Scalable Data Ingestion** | Implemented `Folder.Files()` in M code to combine 479K rows from multiple CSVs, enabling seamless future refreshes without pipeline breakage. |
+| **Annualizing Mixed Salaries** | Developed custom DAX/M logic to convert hourly/monthly rates to annual salaries using a standard 2,080-hour conversion, paired with bidirectional null-filling. |
+| **Messy Skill Strings** | Built a comprehensive standardization pipeline with inline M list definitions and over 70 `if/else` rules to normalize inconsistent skill naming conventions. |
+| **Anomaly Detection** | Discovered geographical mislabeling (e.g., Sudan) through chart-driven data profiling; corrected via cross-referencing string data in the `search_location` column. |
+
+---
+
+## 💻 How to Run (Live Demo)
+
+1. Clone this repository: `git clone https://github.com/your-username/your-repo-name.git`
+2. Ensure you have [Power BI Desktop](https://powerbi.microsoft.com/desktop/) installed.
+3. Open the `Data_Jobs_Dashboard_2024.pbix` file.
+4. *(Optional)* To view the ETL steps, open **Power Query Editor** (`Transform Data`). 
+5. *(Optional)* To view the Data Model, navigate to the **Model View** tab on the left sidebar.
+
+---
+
+
+## 🏁 Conclusion & Future Outlook
+
+This project represents the intersection of **Data Engineering** and **Business Intelligence**. By architecting a robust, scalable backend and a transparent, user focused frontend, I have transformed nearly half a million rows of unstructured data into a high performance decision making tool.
+
+The architecture developed here specifically the **Star Schema** and **dynamic M pipelines** is built for growth. This project demonstrates a commitment to **data integrity** (via the Data Quality audits), **technical performance** (via dimensional modeling), and **business value** (via actionable storytelling). As the global job market continues to evolve, this modular system remains ready to ingest new data and provide persistent, reliable career intelligence.
+
+
+
+*Built by Faisal Salama —> Data Analyst/Engineer* [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/salamafaisal) [![GitHub](https://img.shields.io/badge/GitHub-Profile-black)](https://github.com/V8FS1)
