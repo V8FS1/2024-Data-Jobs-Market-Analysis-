@@ -6,7 +6,7 @@
 
 
 #### 📁 **Dashboard file:** [`2024_Data_Jobs_Market_Analysis.pbix`](2024_Data_Jobs_Market_Analysis.pbix)
-#### 📄 **Full technical documentation:** [`Documentation/DOCUMENTATION.md`](Documentation/DOCUMENTATION.md)
+#### 📄 **Full technical documentation:** [`Documentation/Documentation.md)
 ---
 
 ## 🚀 Business Impact & Key Insights
@@ -100,8 +100,6 @@ Maps out the distribution of job postings across enterprise, mid-size, and start
 
 ```
 data-jobs-market-analysis/
-├── 2024_Data_Jobs_Market_Analysis.pbix   ← Power BI dashboard file
-├── README.md                             ← Project overview (this file)
 ├── Documentation/
 │   └── DOCUMENTATION.md                 ← Full technical documentation
 ├── Images/
@@ -111,7 +109,9 @@ data-jobs-market-analysis/
 │   ├── 4_Salary_Insights.png
 │   └── 5_Data_Quality.png
 └── Videos/
-    └── DashboardOverview.gif
+│    └── DashboardOverview.gif
+├── 2024_Data_Jobs_Market_Analysis.pbix   ← Power BI dashboard file
+├── README.md                             ← Project overview (this file)
 ```
 ---
 ## 💻 How to Run (Live Demo)
