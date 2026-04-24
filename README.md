@@ -19,11 +19,11 @@ This dashboard is designed to answer critical questions for both data profession
 
 ## 🏗️ Data Architecture & Tech Stack
 
-This project was built with a Software Engineering approach to data, emphasizing scalability, data quality, and robust modeling.
+This project was built with an engineering mindset - emphasizing scalability, data quality, and robust modeling over ad-hoc analysis.
 
 * **ETL Pipeline Construction:** Utilized Power Query and Advanced M Code to ingest raw CSV files dynamically via `Folder.Files()`, ensuring scalable, automatic ingestion of future datasets.
 * **Dimensional Modeling:** Architected a **Star Schema** to optimize query performance, replacing flat files with distinct Fact and Dimension tables.
-* **Data Normalization:** Applied 1NF/2NF principles to expand multi-value JSON-style arrays (e.g., raw skills) into a highly performant Many-to-Many (M:M) bridge table configuration.
+* **Data Normalization:** Normalized multi-value and JSON-style columns into a relational structure using bridge and dimension tables, resolving many-to-many relationships cleanly.
 * **Feature Engineering:** Developed dynamic DAX bucketing for salary histograms, converted Boolean values to user-friendly labels, and utilized bidirectional null-filling for annualized salary conversions.
 
 ---
@@ -56,23 +56,23 @@ Curated 198 meaningful skills from a larger raw set by defining seven skill cate
 ---
 ## 📸 Dashboard Walkthrough
 
-### 1. Market Overview (The Executive View)
+### Market Overview (The Executive View)
 Focuses on intuitive UI/UX and clear, question-based chart titles to provide immediate macro-level insights into global hiring trends.
 ![Market Overview](Images/1_Market_Overview.png)
 
-### 2. Data Quality & Governance (The Engineering Mindset)
+### Data Quality & Governance (The Engineering Mindset)
 Rather than hiding incomplete data, this page explicitly audits the dataset. Highlighting the 94% missing salary data demonstrates a commitment to data transparency and prevents stakeholders from making assumptions based on skewed metrics.
 ![Data Quality](Images/5_Data_Quality.png)
 
-### 3. Skills & Roles (M:M Relationship Architecture)
+### Skills & Roles (M:M Relationship Architecture)
 This matrix is powered by a pre-aggregated table built via complex M code and a many-to-many bridge table, standardizing over 70+ inconsistent skill variants into a clean taxonomy.
 ![Skills and Roles](Images/3_Skills_Roles.png)
 
-### 4. Salary Insights (Statistical Rigor)
+### Salary Insights (Statistical Rigor)
 Utilizes **Median over Mean** to prevent high-salary outliers from skewing the data. Powered by dynamic DAX measures to filter and bucket compensation ranges accurately.
 ![Salary Insights](Images/4_Salary_Insights.png)
 
-### 5. Company Insights
+### Company Insights
 Maps out the distribution of job postings across enterprise, mid-size, and startup landscapes to track employer behavior.
 ![Company Insights](Images/2_Company_Insights.png)
 
