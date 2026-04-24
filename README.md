@@ -4,6 +4,9 @@
 
 ![Dashboard Overview GIF](Videos/DashboardOverview.gif)
 
+
+#### 📁 **Dashboard file:** [`2024_Data_Jobs_Market_Analysis.pbix`](2024_Data_Jobs_Market_Analysis.pbix)
+#### 📄 **Full technical documentation:** [`Documentation/DOCUMENTATION.md`](Documentation/DOCUMENTATION.md)
 ---
 
 ## 🚀 Business Impact & Key Insights
@@ -14,7 +17,12 @@ This dashboard is designed to answer critical questions for both data profession
 * **Skill Prerequisites:** What are the non-negotiable tech stacks for Data Engineers vs. Data Scientists?
 * **Compensation Benchmarks:** How do median salaries fluctuate across employment types (Full-time vs. Contract)?
 * **Data Reliability:** How much of the available job market data is statistically viable for compensation analysis?
-
+  
+**What the data reveals:**
+- **Data Engineer** is the most in-demand role, with 129K postings, 14% more than Data Analyst
+- **Python and SQL** lead all skills with 240K+ mentions each; cloud (AWS, Azure) follows closely
+- **Median yearly salary: $110K**, but only 6.35% of postings disclosed compensation data
+- **67% of jobs require no degree** skills-first hiring dominates the data job market
 ---
 
 ## 🏗️ Data Architecture & Tech Stack
@@ -88,12 +96,29 @@ Maps out the distribution of job postings across enterprise, mid-size, and start
 | **Anomaly Detection** | Discovered geographical mislabeling (e.g., Sudan) through chart-driven data profiling; corrected via cross-referencing string data in the `search_location` column. |
 
 ---
+## 📁 Repository Structure
 
+```
+data-jobs-market-analysis/
+├── 2024_Data_Jobs_Market_Analysis.pbix   ← Power BI dashboard file
+├── README.md                             ← Project overview (this file)
+├── Documentation/
+│   └── DOCUMENTATION.md                 ← Full technical documentation
+├── Images/
+│   ├── 1_Market_Overview.png
+│   ├── 2_Company_Insights.png
+│   ├── 3_Skills_Roles.png
+│   ├── 4_Salary_Insights.png
+│   └── 5_Data_Quality.png
+└── Videos/
+    └── DashboardOverview.gif
+```
+---
 ## 💻 How to Run (Live Demo)
 
-1. Clone this repository: `git clone https://github.com/your-username/your-repo-name.git`
+1. Clone this repository: `https://github.com/V8FS1/2024-Data-Jobs-Market-Analysis-.git`
 2. Ensure you have [Power BI Desktop](https://powerbi.microsoft.com/desktop/) installed.
-3. Open the `Data_Jobs_Dashboard_2024.pbix` file.
+3. Open the `2024_Data_Jobs_Market_Analysis.pbix` file.
 4. *(Optional)* To view the ETL steps, open **Power Query Editor** (`Transform Data`). 
 5. *(Optional)* To view the Data Model, navigate to the **Model View** tab on the left sidebar.
 
@@ -102,9 +127,9 @@ Maps out the distribution of job postings across enterprise, mid-size, and start
 
 ## 🏁 Conclusion & Future Outlook
 
-This project represents the intersection of **Data Engineering** and **Business Intelligence**. By architecting a robust, scalable backend and a transparent, user focused frontend, I have transformed nearly half a million rows of unstructured data into a high performance decision making tool.
+This project represents the intersection of **Data Engineering** and **Business Intelligence**. By architecting a robust, scalable backend and a transparent, user-focused frontend, I have transformed nearly half a million rows of unstructured data into a high-performance decision-making tool.
 
-The architecture developed here specifically the **Star Schema** and **dynamic M pipelines** is built for growth. This project demonstrates a commitment to **data integrity** (via the Data Quality audits), **technical performance** (via dimensional modeling), and **business value** (via actionable storytelling). As the global job market continues to evolve, this modular system remains ready to ingest new data and provide persistent, reliable career intelligence.
+The architecture developed here specifically the **Star Schema** and **dynamic M pipelines**, is built for growth. This project demonstrates a commitment to **data integrity** (via the Data Quality audits), **technical performance** (via dimensional modeling), and **business value** (via actionable storytelling). As the global job market continues to evolve, this modular system remains ready to ingest new data and provide persistent, reliable career intelligence.
 
 
 
