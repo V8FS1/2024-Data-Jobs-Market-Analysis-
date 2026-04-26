@@ -7,7 +7,7 @@
 
 #### 📁 **Dashboard file:** [`2024_Data_Jobs_Market_Analysis.pbix`](2024_Data_Jobs_Market_Analysis.pbix)
 #### 📄 **Full technical documentation:** [`Documentation.md`](2024-Data-Jobs-Market-Analysis-/Documentation/Documentation.md)
-#### 📂 **Original And Modified DataSets:** [`DataSets`](2024-Data-Jobs-Market-Analysis-/Dataset)
+#### 📂 **Original And Modified DataSets:** [`DataSets`](2024-Data-Jobs-Market-Analysis-/Datasets)
 ---
 
 ## 🚀 Business Impact & Key Insights
