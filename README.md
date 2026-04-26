@@ -120,7 +120,7 @@ data-jobs-market-analysis/
 ---
 ## 💻 How to Run (Live Demo)
 
-1. Clone this repository: `https://github.com/V8FS1/2024-Data-Jobs-Market-Analysis-.git`
+1. Clone this repository: `https://github.com/V8FS1/2024-Data-Jobs-Market-Analysis.git`
 2. Ensure you have [Power BI Desktop](https://powerbi.microsoft.com/desktop/) installed.
 3. Open the `2024_Data_Jobs_Market_Analysis.pbix` file.
 4. *(Optional)* To view the ETL steps, open **Power Query Editor** (`Transform Data`). 
