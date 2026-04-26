@@ -6,7 +6,8 @@
 
 
 #### 📁 **Dashboard file:** [`2024_Data_Jobs_Market_Analysis.pbix`](2024_Data_Jobs_Market_Analysis.pbix)
-#### 📄 **Full technical documentation:** [`Documentation/Documentation.md)
+#### 📄 **Full technical documentation:** [`Documentation.md`](2024-Data-Jobs-Market-Analysis-/Documentation/Documentation.md)
+#### 📂 **Original And Modified DataSets:** [`DataSets`](2024-Data-Jobs-Market-Analysis-/Dataset)
 ---
 
 ## 🚀 Business Impact & Key Insights
@@ -100,6 +101,9 @@ Maps out the distribution of job postings across enterprise, mid-size, and start
 
 ```
 data-jobs-market-analysis/
+├── DataSets
+│   └──Modified
+│   └──Original
 ├── Documentation/
 │   └── DOCUMENTATION.md                 ← Full technical documentation
 ├── Images/
