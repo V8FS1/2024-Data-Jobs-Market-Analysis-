@@ -2,7 +2,12 @@
 
 > An end-to-end Business Intelligence solution analyzing 479,000+ global data job postings. Engineered with a scalable ETL pipeline, dimensional modeling (Star Schema), and advanced DAX to surface hiring trends, skill demands, and salary benchmarks.
 
-![Dashboard Overview GIF](Videos/DashboardOverview.gif)
+
+## Dashboard Overview
+https://github.com/user-attachments/assets/dac90ff7-f902-4d87-ba39-e784f5b27bb4
+
+
+
 
 
 #### 📁 **Dashboard file:** [`2024_Data_Jobs_Market_Analysis.pbix`](2024_Data_Jobs_Market_Analysis.pbix)
